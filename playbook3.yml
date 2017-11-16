@@ -1,5 +1,7 @@
 - hosts: webservers
   tasks:
   - name: docker run hello-world
-    command: docker run hello-world
+    command: docker run -d szaboz/devops-pelda
+  - name: confirm docker
+    command: curl localhost:8675/sum?a=1\&b=2
   
